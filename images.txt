@@ -3,5 +3,5 @@
 #xhofe/alist:latest
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
-redis:7.2.5
-mysql:5.7.44
+java:8u111-jdk
+node:16.20.2
