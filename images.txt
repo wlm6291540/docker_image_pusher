@@ -3,7 +3,7 @@
 #xhofe/alist:latest
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
-registry.k8s.io/coredns:v1.10.1
+#registry.k8s.io/coredns:v1.10.1
 registry.k8s.io/etcd:3.5.9-0
 registry.k8s.io/kube-apiserver:v1.28.2
 registry.k8s.io/kube-apiserver:v1.28.2
