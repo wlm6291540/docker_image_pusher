@@ -70,8 +70,8 @@ jobs:
             
             # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
             image=$(echo "$line" | awk '{print $NF}')
-            if [ `echo $image | tr " " "\n" | wc -l` -eq 2 ];then
-                image=$(echo "$image" | awk '{print $1}')
+            if [ `echo $line | tr " " "\n" | wc -l` -eq 2 ];then
+                image=$(echo "$line" | awk '{print $1}')
             fi
             # 将@sha256:等字符删除
             image="${image%%@*}"
