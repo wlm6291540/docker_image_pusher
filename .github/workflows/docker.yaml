@@ -130,6 +130,7 @@ jobs:
             name_space=$(echo "$image" | awk -F'/' '{if (NF==3) print $2; else if (NF==2) print $1; else print ""}')
             # 获取镜像名例  例如nginx
             image_name=$(echo "$image_name_tag" | awk -F':' '{print $1}')
+            image_tag=$(echo "$image_name_tag" | awk -F':' '{print $2}')
         
             name_space_prefix=""
             # 如果镜像名重名
@@ -141,6 +142,7 @@ jobs:
             fi
             
             # 将@sha256:等字符删除
+            image_name_tag="$(docker images |grep $image_name |grep $image_tag  | awk '{print $1":"$2}')"
             image_name_tag="${image_name_tag%%@*}"
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$(echo $line | awk '{print $NF}')"
             echo "docker tag $image_name_tag $new_image"
