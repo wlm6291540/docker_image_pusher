@@ -144,11 +144,12 @@ jobs:
             image_name_tag="${image_name_tag%%@*}"
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
             if [ `echo $image | tr " " "\n" | wc -l` -eq 2 ];then
-                image_name_tag=$(echo "$image" | awk '{print $2}')
-                new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$image_name_tag"
+                image_name_tag=$(echo "$image" | awk -F'/' '{print $NF}' | awk '{print $1}')
+                new_image_name_tag=$(echo "$image" | awk '{print $2}')
+                new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$new_image_name_tag"
             fi
-            echo "docker tag $origin_image" $new_image"
-            docker tag $origin_image" $new_image
+            echo "docker tag $image_name_tag $new_image"
+            docker tag $image_name_tag $new_image
             echo "docker push $new_image"
             docker push $new_image
             echo "开始清理磁盘空间"
