@@ -5,3 +5,4 @@
 #--platform=linux/arm64 xiaoyaliu/alist
 #
 apache/rocketmq:5.2.0 apache-rocketmq:5.2.0
+node:20.16.0 nodejs-node:20.16.0
