@@ -4,4 +4,4 @@
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 #
-openjdk:8u111-jdk ychg-common/openjdk:8u111-jdk
+docker.io/openjdk:8u111-jdk ychg-common/openjdk:8u111-jdk
