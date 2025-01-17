@@ -4,4 +4,4 @@
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 #
-docker.io/openjdk:8u111-jdk ychg-common/openjdk:8u111-jdk
+mysql:8.4.3 ychg-common/mysql:8.4.3
