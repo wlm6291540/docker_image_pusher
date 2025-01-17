@@ -146,11 +146,9 @@ jobs:
             # 将@sha256:等字符删除
             image_name_tag="$(docker images |grep $image_name |grep $image_tag  | awk '{print $1":"$2}')"
             image_name_tag="${image_name_tag%%@*}"
-            #new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$(echo $line | awk '{print $NF}')"
-            new_image="registry.cn-hangzhou.aliyuncs.com/ychg-common/$(echo $line | awk '{print $NF}')"
+            new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$platform_prefix$name_space_prefix$(echo $line | awk '{print $NF}')"
             echo "docker tag $image_name_tag $new_image"
             docker tag $image_name_tag $new_image
-            docker images
             echo "docker push $new_image"
             docker push $new_image
             echo "开始清理磁盘空间"
