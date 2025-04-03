@@ -4,4 +4,4 @@
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 #
-maven:3.8-jdk-11 maven:3.8-jdk-11
+alpine:latest alpine:latest
