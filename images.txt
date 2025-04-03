@@ -4,4 +4,4 @@
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 #
-mysql:8.4.3 mysql:8.4.3
+gitlab/gitlab-ce:latest gitlab-ce:latest
