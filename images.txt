@@ -4,4 +4,4 @@
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 #
-postgres:17 postgres:17
+jenkins/jenkins:2.479.1 jenkins:2.479.1
