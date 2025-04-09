@@ -4,4 +4,4 @@
 #支持指定架构
 #--platform=linux/arm64 xiaoyaliu/alist
 #
-jenkins/jenkins:2.401.3-lts jenkins:2.401.3-lts
+nodejs:20.16.0 node:20.16.0
